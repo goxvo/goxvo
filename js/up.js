@@ -1,4 +1,3 @@
-
 vAR
 UP=function(o,success,error,upload,x,file,A){
 	if(typeof success=='function')
