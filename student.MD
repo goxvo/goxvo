@@ -1,4 +1,4 @@
-![cover](https://raw.githubusercontent.com/ivmm/Student-resources/master/Student-resources-min.png)
+![cover](https://user-images.githubusercontent.com/32005150/31016761-8f6a985e-a558-11e7-9189-f291e5f28af0.png)
 
 # 说明
 
