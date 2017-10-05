@@ -18,91 +18,10 @@
     <script src="http://libs.useso.com/js/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <style>
-			*{
-				margin: 0;
-				padding: 0;
-			}
-			#upBox{
-				text-align: center;
-				width:500px;
-				padding: 20px;
-				border: 1px solid #666;
-				margin: auto;
-				margin-top: 150px;
-				margin-bottom: 200px;
-				position: relative;
-				border-radius: 10px;
-			}
-			#inputBox{
-				width: 100%;
-				height: 40px;
-				border: 1px solid cornflowerblue;
-				color: cornflowerblue;
-				border-radius: 20px;
-				position: relative;
-				text-align: center;
-				line-height: 40px;
-				overflow: hidden;
-				font-size: 16px;
-			}
-			#inputBox input{
-				width: 114%;
-				height: 40px;
-				opacity: 0;
-				cursor: pointer;
-				position: absolute;
-				top: 0;
-				left: -14%;
-				
-			}
-			#imgBox{
-				text-align: left;
-			}
-			.imgContainer{
-				display: inline-block;
-				width: 32%;
-				height: 150px;
-				margin-left: 1%;
-				border: 1px solid #666666;
-				position: relative;
-				margin-top: 30px;
-				box-sizing: border-box;
-			}
-			.imgContainer img{
-				width: 100%;
-				height: 150px;
-				cursor: pointer;
-			}
-			.imgContainer p{
-				position: absolute;
-				bottom: -1px;
-				left: 0;
-				width: 100%;
-				height: 30px;
-				background: black;
-				text-align: center;
-				line-height: 30px;
-				color: white;
-				font-size: 16px;
-				font-weight: bold;
-				cursor: pointer;
-				display: none;
-			}
-			.imgContainer:hover p{
-				display: block;
-			}
-			#btn{
-				outline: none;
-				width: 100px;
-				height: 30px;
-				background: cornflowerblue;
-				border: 1px solid cornflowerblue;
-				color: white;
-				cursor: pointer;
-				margin-top: 30px;
-				border-radius: 5px;
-			}
-	  
+img{
+	max-width:80%;
+	display:block;
+}  
 body { font-family:"微软雅黑","Microsoft YaHei";word-wrap:break-word;word-break:break-all;}
 a{
 text-decoration: none;
@@ -166,6 +85,34 @@ text-decoration: none;
         </div>
         <div class="col-md-4"></div>
     </div>
+	<input type="file" id="选图">
+<img id="图片">
+<p id="文本"></p>
+
+<script src="up.itorr.js"></script>
+
+<script>
+选图.onchange=function(){
+	if(!this.files||!this.files[0])
+		return alert('选取文件出错！')
+
+	var 
+	图片文件=this.files[0]
+
+	if(图片文件.type.indexOf('image')!=0)
+		return alert('这不是一个图像或音频！')
+	
+	UP(图片文件,function(pid){
+		文本.innerHTML=
+		图片.src='http://ww2.sinaimg.cn/large/'+pid
+
+	},function(){
+		alert('上传文件出错了！')
+	},function(进度){
+		文本.innerHTML=进度*100+'%'
+	})
+}
+</script>
 	    <iframe frameborder="0" src="about:blank" class="iframe-content center-block" name="iframe-content" width="100%" height="100%">
     </iframe>
 	          </div>
