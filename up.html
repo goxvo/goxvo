@@ -85,34 +85,6 @@ text-decoration: none;
         </div>
         <div class="col-md-4"></div>
     </div>
-	<input type="file" id="选图">
-<img id="图片">
-<p id="文本"></p>
-
-<script src="js/up.js"></script>
-
-<script>
-选图.onchange=function(){
-	if(!this.files||!this.files[0])
-		return alert('选取文件出错！')
-
-	var 
-	图片文件=this.files[0]
-
-	if(图片文件.type.indexOf('image')!=0)
-		return alert('这不是一个图像或音频！')
-	
-	UP(图片文件,function(pid){
-		文本.innerHTML=
-		图片.src='http://ww2.sinaimg.cn/large/'+pid
-
-	},function(){
-		alert('上传文件出错了！')
-	},function(进度){
-		文本.innerHTML=进度*100+'%'
-	})
-}
-</script>
 	    <iframe frameborder="0" src="about:blank" class="iframe-content center-block" name="iframe-content" width="100%" height="100%">
     </iframe>
 	          </div>
