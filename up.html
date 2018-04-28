@@ -64,6 +64,42 @@ text-decoration: none;
         </strong></div><strong class="text-success">
     </strong></div><strong class="text-success">
 
+	    	    <div class="col-md-14 column">
+        <div class="panel panel-default">
+            <div class="panel-body">
+
+		          <div class="page-header">
+        <h3 class="text-center h3-xs">三合一收款码<small class="text-capitalize">Pay</small></h3>
+      </div>
+      <h5 class="text-right"><small>支持QQ、支付宝、微信支付方式</small></h5>
+			<div class="form-group" id="input-wrap">
+				<div class="code-item" id="code-pay">
+					<div class="code-title"></div>
+					<div class="code-area text-center"><img src="https://pan.baidu.com/share/qrcode?w=200&h=200&url=http%3A%2F%2Ftools.yum6.cn%2Fpay%2F%3F%26rand%3D2c80e8162f25b9200c9923574cd2e7a4"></div>
+                  <div class="code-footer text-center">长按以上二维码向我付款<br/>打赏请注明信息,方便记录上榜</div>
+				</div>
+			</div><!-- /.col-lg-6 -->
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+if(navigator.userAgent.match(/MicroMessenger\//i)) {// 微信
+	$('.code-title').html('微信支付：');
+} else if(navigator.userAgent.match(/QQ\//i)) {// QQ
+	$('.code-title').html('QQ支付：');
+} else {// 其它，显示“万能码”
+	$('.code-title').html('手机扫描二维码：');
+}
+</script>
+<!--footer start-->
+<footer class="footer text-center">
+	<div>
+		
+        </div>
+        <div class="col-md-4"></div>
+    </div>
+	    <iframe frameborder="0" src="about:blank" class="iframe-content center-block" name="iframe-content" width="100%" height="100%">
+    </iframe>
 
 	          </div>
         </div>
